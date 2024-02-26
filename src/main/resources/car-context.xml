@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+    <bean class="org.example.NissanCar" id="nissanCar"> <!-- nissanCar-->
+        <property name="idNissan" value="2"/> <!-- setIdNissan-->
+        <property name="country" value="Japan"/>
+        <property name="name" value="sunny"/>
+        <property name="weight" value="2000"/>
+        <property name="map">
+            <map>
+                <entry key="map1" value="111"/>
+                <entry key="map2" value="222"/>
+            </map>
+        </property>
+    </bean>
+
+    <bean class="org.example.MersedesCar" id="mersedesCar">
+        <constructor-arg name="idCar" value="2"/>
+        <constructor-arg name="vendor" value="mercedes"/>
+        <constructor-arg name="model" value="s500"/>
+        <constructor-arg name="color" value="white"/>
+        <constructor-arg name="complectation">
+            <list>
+                <value>airbag</value>
+                <value>cameras</value>
+                <value>autopilot</value>
+            </list>
+        </constructor-arg>
+    </bean>
+
+
+    <bean class="org.example.CarFabric" id="carFabric">
+        <property name="car" ref="mersedesCar"/>
+    </bean>
+
+</beans>

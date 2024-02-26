@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+    <bean class="org.Homework01.Library" id="oxfordLibrary">
+        <property name="idLibrary" value="2"/>
+        <property name="name" value="Oxford library"/>
+        <property name="city" value="Oxford, Великобританія"/>
+        <property name="authors">
+            <list>
+                <ref bean="williamShakespeare"/>
+                <ref bean="janeAusten"/>
+            </list>
+        </property>
+        <property name="books">
+            <list>
+                <ref bean="hamletBook"/>
+                <ref bean="theTragedyOfMacbethBook"/>
+                <ref bean="aMidsummerNightsDreamBook"/>
+                <ref bean="othelloBook"/>
+                <ref bean="theTragedyOfMacbethBook"/>
+                <ref bean="prideAndPrejudiceBook"/>
+                <ref bean="northangerAbbeyBook"/>
+                <ref bean="senseAndSensibilityBook"/>
+                <ref bean="theWatsonsBook"/>
+                <ref bean="ladySusanBook"/>
+            </list>
+        </property>
+    </bean>
+
+
+    <bean class="org.Homework01.Authors" id="williamShakespeare">
+        <property name="idAuthors" value="1"/>
+        <property name="name" value="William"/>
+        <property name="surname" value="Shakespeare"/>
+        <property name="books">
+            <list>
+                <ref bean="hamletBook"/>
+                <ref bean="theTragedyOfMacbethBook"/>
+                <ref bean="aMidsummerNightsDreamBook"/>
+                <ref bean="othelloBook"/>
+                <ref bean="theTempestBook"/>
+            </list>
+        </property>
+    </bean>
+
+    <bean class="org.Homework01.Books" id="hamletBook">
+        <property name="idBooks" value="1"/>
+        <property name="title" value="Hamlet"/>
+        <property name="authors">
+            <list>
+                <ref bean="williamShakespeare"/>
+            </list>
+        </property>
+    </bean>
+
+    <bean class="org.Homework01.Books" id="theTragedyOfMacbethBook">
+        <property name="idBooks" value="2"/>
+        <property name="title" value="The Tragedy of Macbeth"/>
+        <property name="authors">
+            <list>
+                <ref bean="williamShakespeare"/>
+            </list>
+        </property>
+    </bean>
+
+    <bean class="org.Homework01.Books" id="aMidsummerNightsDreamBook">
+        <property name="idBooks" value="3"/>
+        <property name="title" value="A Midsummer Night's Dream"/>
+        <property name="authors">
+            <list>
+                <ref bean="williamShakespeare"/>
+            </list>
+        </property>
+    </bean>
+
+    <bean class="org.Homework01.Books" id="othelloBook">
+        <property name="idBooks" value="4"/>
+        <property name="title" value="Othello"/>
+        <property name="authors">
+            <list>
+                <ref bean="williamShakespeare"/>
+            </list>
+        </property>
+    </bean>
+
+    <bean class="org.Homework01.Books" id="theTempestBook">
+        <property name="idBooks" value="5"/>
+        <property name="title" value="The Tempest"/>
+        <property name="authors">
+            <list>
+                <ref bean="williamShakespeare"/>
+            </list>
+        </property>
+    </bean>
+
+
+
+
+
+    <bean class="org.Homework01.Authors" id="janeAusten">
+        <property name="idAuthors" value="2"/>
+        <property name="name" value="Jane"/>
+        <property name="surname" value="Austen"/>
+        <property name="books">
+            <list>
+                <ref bean="prideAndPrejudiceBook"/>
+                <ref bean="northangerAbbeyBook"/>
+                <ref bean="senseAndSensibilityBook"/>
+                <ref bean="theWatsonsBook"/>
+                <ref bean="ladySusanBook"/>
+            </list>
+        </property>
+    </bean>
+
+    <bean class="org.Homework01.Books" id="prideAndPrejudiceBook">
+        <property name="idBooks" value="1"/>
+        <property name="title" value="Pride and Prejudice"/>
+        <property name="authors">
+            <list>
+                <ref bean="janeAusten"/>
+            </list>
+        </property>
+    </bean>
+
+    <bean class="org.Homework01.Books" id="northangerAbbeyBook">
+        <property name="idBooks" value="2"/>
+        <property name="title" value="Northanger Abbey"/>
+        <property name="authors">
+            <list>
+                <ref bean="janeAusten"/>
+            </list>
+        </property>
+    </bean>
+
+    <bean class="org.Homework01.Books" id="senseAndSensibilityBook">
+        <property name="idBooks" value="3"/>
+        <property name="title" value="Sense and Sensibility"/>
+        <property name="authors">
+            <list>
+                <ref bean="janeAusten"/>
+            </list>
+        </property>
+    </bean>
+
+    <bean class="org.Homework01.Books" id="theWatsonsBook">
+        <property name="idBooks" value="4"/>
+        <property name="title" value="The Watsons"/>
+        <property name="authors">
+            <list>
+                <ref bean="janeAusten"/>
+            </list>
+        </property>
+    </bean>
+
+    <bean class="org.Homework01.Books" id="ladySusanBook">
+        <property name="idBooks" value="5"/>
+        <property name="title" value="Lady Susan"/>
+        <property name="authors">
+            <list>
+                <ref bean="janeAusten"/>
+            </list>
+        </property>
+    </bean>
+
+</beans>
